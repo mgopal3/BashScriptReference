@@ -30,5 +30,7 @@ echo -e 'one\ttwo\tthree\tfour'
 #echo with new line
 echo -e 'one\ntwo\nthree\nfour'
 
+#Need to continue. Lost some data
+
 
 
