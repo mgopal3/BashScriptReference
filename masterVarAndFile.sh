@@ -95,6 +95,22 @@ echo -e "\nremove the non writable from above"
 chmod -w script.sh
 ls -la script.sh
 
+#Use chmon\d with +r -r +w -w +x -x filename to add/remove read/write/execute permissions
+#chown is used to change ower
+#sudo adduser ram --- is a possibility to add a new user. You can then change owner of the file use "chown newuser filename"
+
+
+#using Underscore Variable touchFile, use underscore variable to append to it.
+Und_var="hELLO mememe "
+touch new.txt
+echo "$Und_var" >> new.txt
+cat new.txt
+
+
+
+
+
+
 
 
 
