@@ -105,6 +105,7 @@ END_HEREDOC
 echo $VAR
 
 #cat multiline heredoc tes\xt
+#note: $(whoami) will be executed and $PWD is a variable. 
 cat<<LINUXHINT
 I am able to cat everything using heredoc
 the current working directory is : $PWD
