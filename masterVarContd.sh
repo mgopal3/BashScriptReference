@@ -88,6 +88,30 @@ v3="my third string to use"
 var3="${v1}\t${v2}\t${v3}"
 echo -e $var3
 
+# Use += to combine variables
+echo "using += to conbine \"$v1\" and \"$v2\" to"
+
+v1+="$v2"
+
+echo $v1
+
+#create multilevel string variable with HEREDOC
+VAR=$(cat<<'END_HEREDOC'
+here we write 
+multiline strings using heredoc
+Notice that the bracket has to be in the next line
+END_HEREDOC
+)
+echo $VAR
+
+#cat multiline heredoc tes\xt
+cat<<LINUXHINT
+I am able to cat everything using heredoc
+the current working directory is : $PWD
+you are logged in as: $(whoami)
+LINUXHINT
+
+
 
 
 
