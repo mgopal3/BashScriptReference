@@ -145,3 +145,55 @@ else
 fi
 
 
+#conditional case statements with numbers
+VAR=10
+case $VAR in
+	10)
+		echo "$VAR"
+		;;
+	20) 
+		echo "$VAR"
+		;;
+	*)
+		echo "default case"
+		;;
+esac
+
+#conditional case statements with strings
+CAR="BMW AUDI" #remmeber super case sensitive and also to spaces
+case $CAR in
+	TOYOTA) #Note, don't need the quotes unless it has space seperated values
+		echo "$CAR"
+		;;
+	"BMW AUDI") 
+		echo "$CAR"
+		;;
+	*)
+		echo "None of the above"
+		;;
+esac
+
+#conditional case statements with wildcards
+CAR="BMW AUDI" #remmeber super case sensitive and also to spaces
+case $CAR in
+	TOYOTA) #Note, don't need the quotes unless it has space seperated values
+		echo "$CAR"
+		;;
+	"BMW*") #notice this is a string literal with * as a string
+		echo "$CAR"
+		;;
+	BMW*) #a wildcard statement
+		echo "$CAR"
+		;;
+	*)
+		echo "None of the above"
+		;;
+esac
+
+#execute a command with backticks
+chown maithreyi /dir #note here the backslash works with no problem
+
+
+
+
+
