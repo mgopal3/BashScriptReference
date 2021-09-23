@@ -62,18 +62,86 @@ var='Hello'
 rav='World'
 tar='Hello'
 
-if [ $var = $rav ]
+if [ $var = $tar ]
 then 
 	echo "single equal worked and both are string"
 else
 	echo "single equal no workie"
 fi
 
-if [ $var == $rav ]
+if [ $var == $tar ]
 then 
 	echo "double equal same and both strings have exact value stored in them"
 else
 	echo "double equal failed cause the values are different"
 	
 fi
+
+# test non equal string
+
+if [[ $var != $rav ]]
+then 
+	echo "Both strings are diff! tested not equal"
+fi
+
+v1="Hello world" 
+v2="Helloworld"
+#Test two strings Before or After alphabetically
+if [[ $v1 == $v2 ]]  #to use strings with spacesm you have to use the [[  ]] 
+then 
+	echo "double equal same and both strings have exact value stored in them"
+else
+	echo "double equal failed cause the values are different"
+	
+fi
+
+#NULL check
+
+v2='' # NULL declaration
+if [[ $v2 = '' ]]
+then 
+	echo 'NuLL'
+else 
+	echo 'not null'
+fi
+
+if [[ $v1 != '' ]]
+then 
+	echo -e "$v1"
+else 
+	echo 'NULL'
+fi
+
+#NUmerical comparison > and <
+v1=15
+
+if [[ $v1 -gt 10 ]] && [[ $v1 -lt 20 ]]
+then 
+	echo "between 10 and 20"
+fi	
+
+#NUmerical comparison > and <
+v1=15
+
+if (( $v1 >= 10 )) && (( $v1 <= 20 ))
+then 
+	echo "between 10 and 20"
+fi	
+
+#check if numbers are equal
+v2=15
+
+if (( $v1 == $v2))
+then 
+	echo "equal variables"
+fi
+
+v2=25
+if (( $v1 != $v2))
+then 
+	echo "NOT equal variables"
+else 
+	echo "equal variables"
+fi
+
 
