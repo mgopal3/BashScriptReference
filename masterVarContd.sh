@@ -114,10 +114,30 @@ LINUXHINT
 
 
 
+echo "variables and commands"
+#Execute a command through a variable
+var=$(cat file.txt) #cat file.txt is the command. Use $ to execute the command to execute 
+echo "$var"
 
+#execute a command and capture the out into a var and store into a file
+echo "$var" > output.txt  #save variables data to output.txt
+cat output.txt #show content of output.txt
 
+#execute a command and capture the stderr
+#$var > stderr.txt
 
+#capture return code from command
+echo $? > returncode.txt # $? - prints the return code
 
+#execute command
+#replaces previous command with the current command
+
+#commenting it to get the rest working
+#exec > tmp              #created a new file and control moves to that file
+#echo "Hello World"      #the echo goes to write into that file
+
+#eval used to print arguments to the terminal
+eval echo "Hello World" + " abc " + "3"
 
 
 
